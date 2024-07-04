@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding cards</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="box">
+            <div class="card" onclick="clicked(this)">
+                <img src="images/5bd3350aedb54-wallpaper-preview.jpg" alt="">
+                <h1>Two Lion Cubs</h1>
+            </div>
+            <div class="card" onclick="clicked(this)">
+                <img src="images/bird.jpg" alt="">
+                <h1>Parrot</h1>
+            </div>
+            <div class="card" onclick="clicked(this)">
+                <img src="images/ealge.jpg" alt="">
+                <h1>Eagle</h1>
+            </div>
+            <div class="card" onclick="clicked(this)">
+                <img src="images/wolf.jpg" alt="">
+                <h1>wolf</h1>
+            </div>
+            <div class="card" onclick="clicked(this)">
+                <img src="images/rabbit.jpg" alt="">
+                <h1>Rabbit</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function clicked(e){
+        let cards = document.getElementsByClassName("card")
+        for (let c of cards){
+            c.children[0].classList.remove("expand")
+            c.children[1].classList.remove("shown")
+        }
+
+        e.children[0].classList.toggle("expand")
+        e.children[1].classList.toggle("shown")
+    }
+</script>
+</html>
